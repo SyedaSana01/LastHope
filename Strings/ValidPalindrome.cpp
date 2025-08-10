@@ -14,7 +14,7 @@ bool isPalindrome(string s){
         if(!isAlnum(s[st])){
             st++;continue;
         }
-        if(!isAlnum(s[st])){
+        if(!isAlnum(s[e])){
             e--;
             continue;;
 
@@ -29,4 +29,5 @@ bool isPalindrome(string s){
     }
     return true;
     }
+
 
