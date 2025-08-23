@@ -1,0 +1,15 @@
+Here max_element is a STL function that finds the maximum in a vector.
+
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        vector<bool>result;
+        int maxcan=*max_element(candies.begin(),candies.end());
+        
+        for(int c: candies){
+            result.push_back(c+extraCandies >= maxcan);
+        }
+        return result;
+        
+    }
+};
