@@ -21,4 +21,7 @@ int gas(vector<int>gas,vector<int>cost){
     
     }
     return start;
+
 }
+
+To find the amount of gas value 
