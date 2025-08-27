@@ -1,3 +1,9 @@
+
+IN this problem you have to remove stars and the characters left to the stars
+
+
+
+
 class Solution {
 public:
     string removeStars(string s) {
@@ -12,4 +18,5 @@ public:
         return res;
         
     }
+
 };
