@@ -1,3 +1,7 @@
+
+
+To find pairs whose sum is equal to k 
+
 class Solution {
 public:
     int maxOperations(vector<int>& nums, int k) {
