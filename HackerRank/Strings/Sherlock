@@ -1,0 +1,44 @@
+string isValid(string s) {
+    unordered_map<char,int>map;
+    for(char c:s){
+        map[c]++;   
+    }
+    vector<int>arr;
+    for(auto&pair:map){
+        arr.push_back(pair.second);
+    }
+    sort(arr.begin(),arr.end());
+    
+    int first=arr[0];
+    int last = arr[arr.size()-1];
+    
+    // if all the freq are same
+    
+    if(first==last) return "YES";
+    //if all the freq are same and only one freq is 1
+     if(first == 1) {
+        bool valid = true;
+        for(int i=1; i<arr.size(); i++){
+            if(arr[i] != last){
+                valid = false;
+                break;
+            }
+        }
+        if(valid) return "YES";
+    }
+
+    // Case 3: last frequency is 1 more than rest and rest are same
+    bool valid = true;
+    for(int i=0; i<arr.size()-1; i++){
+        if(arr[i] != first){
+            valid = false;
+            break;
+        }
+    }
+    if(valid && last == first + 1) return "YES";
+    
+    
+    
+    return "NO";
+    
+}
